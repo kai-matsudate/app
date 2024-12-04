@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000" # Railsサーバーをホストの3000番ポートに公開
+    stdin_open: true
+    tty: true
